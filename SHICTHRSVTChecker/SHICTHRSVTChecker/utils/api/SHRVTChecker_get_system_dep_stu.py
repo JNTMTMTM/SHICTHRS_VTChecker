@@ -1,6 +1,4 @@
 
-import ctypes
-from ctypes import wintypes
 from ..SHRVTChecker_run_powershell_command import run_powershell_command
 
 def SHRVChecker_get_system_dep_stu(error_class) -> dict:
