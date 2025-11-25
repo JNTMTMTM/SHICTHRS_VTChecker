@@ -9,7 +9,7 @@ import os
 from colorama import init
 init()
 
-from .utils.SHRVTChecker_run_powershell_command import run_powershell_command
+from .utils.api.SHRVChecker_get_virtualization_firmware_stu import SHRVChecker_get_virtualization_firmware_stu
 
 print('\033[1mWelcome to use SHRVTChecker - VT info checker\033[0m\n|  \033[1;34mGithub : https://github.com/JNTMTMTM/SHICTHRS_VTChecker\033[0m')
 print('|  \033[1mAlgorithms = rule ; Questioning = approval\033[0m')
@@ -23,4 +23,10 @@ class SHRVTCheckerException(BaseException):
         return self.message
 
 def SHRVTChecker_get_vt_info() -> dict:
-    pass
+    # VirtualizationFirmware
+    try:
+        VirtualizationFirmware_stu : dict = SHRVChecker_get_virtualization_firmware_stu(SHRVTCheckerException)
+
+
+    except Exception as e:
+        raise SHRVTCheckerException(f"SHRVTCheckerException [ERROR.5000] unable to get VirtualizationFirmwareEnabled info. | {str(e)}")
