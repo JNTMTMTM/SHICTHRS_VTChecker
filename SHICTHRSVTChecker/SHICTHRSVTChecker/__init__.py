@@ -40,4 +40,4 @@ def SHRVTChecker_get_vt_info() -> dict:
                 'SecondLevelAddressTranslationExtensions_stu' : SecondLevelAddressTranslationExtensions_stu}
 
     except Exception as e:
-        raise SHRVTCheckerException(f"SHRVTCheckerException [ERROR.5000] unable to get VirtualizationFirmwareEnabled info. | {str(e)}")
+        raise SHRVTCheckerException(f"SHRVTCheckerException [ERROR.5004] unable to get VT info. | {str(e)}")

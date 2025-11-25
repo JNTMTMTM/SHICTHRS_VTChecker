@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(name='SHICTHRSJsonLoader',
-      version='1.3.0',
-      description='SHICTHRS json file io/encrypt-decrypt system',
-      url='https://github.com/JNTMTMTM/SHICTHRS_LogCore',
+      version='1.0.0',
+      description='SHICTHRS VT checker',
+      url='https://github.com/JNTMTMTM/SHICTHRS_VTChecker',
       author='SHICTHRS',
       author_email='contact@shicthrs.com',
       license='GPL-3.0',
