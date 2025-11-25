@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setup(name='SHICTHRSJsonLoader',
+setup(name='SHICTHRSVTChecker',
       version='1.0.0',
       description='SHICTHRS VT checker',
       url='https://github.com/JNTMTMTM/SHICTHRS_VTChecker',
