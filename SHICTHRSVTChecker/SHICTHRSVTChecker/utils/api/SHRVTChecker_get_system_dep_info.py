@@ -37,7 +37,7 @@ def SHRVChecker_get_system_dep_info(error_class) -> dict:
         nx_supported = kernel32.IsProcessorFeaturePresent(PROCESSOR_FEATURE)
         DataExecutionPrevention_info['NX_Support_Stu'] = deepcopy(str(bool(nx_supported)).upper())
     except Exception as e:
-        raise error_class(f"SHRVTCheckerException [ERROR.5002.1] unable to get nx_supported status. | {str(e)}")
+        raise error_class(f"SHRVTChecker [ERROR.5002.1] unable to get nx_supported status. | {str(e)}")
     
     try:
         kernel32.GetProcessDEPPolicy.argtypes = [
@@ -78,6 +78,6 @@ def SHRVChecker_get_system_dep_info(error_class) -> dict:
             policy_desc = dep_policies_CPT.get(dep_flags.value , "Unknown strategy")
             DataExecutionPrevention_info['DEP_Strategy'] = deepcopy(policy_desc)
     except Exception as e:
-        raise error_class(f"SHRVTCheckerException [ERROR.5002.2] unable to get DEP_Strategy/DEP_Policy_Flag/DEP_Permanent_Setting status. | {str(e)}")
+        raise error_class(f"SHRVTChecker [ERROR.5002.2] unable to get DEP_Strategy/DEP_Policy_Flag/DEP_Permanent_Setting status. | {str(e)}")
 
     return DataExecutionPrevention_info
