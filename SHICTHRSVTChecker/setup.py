@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='SHICTHRSVTChecker',
-      version='1.1.0',
+      version='1.2.0',
       description='SHICTHRS VT checker',
       url='https://github.com/JNTMTMTM/SHICTHRS_VTChecker',
       author='SHICTHRS',

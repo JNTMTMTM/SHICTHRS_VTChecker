@@ -5,7 +5,6 @@
 # Copyright : © 2025-2026 SHICTHRS, Std. All rights reserved.
 # lICENSE : GPL-3.0
 
-import os
 from colorama import init
 init()
 
@@ -20,7 +19,7 @@ print('|  \033[1mCopyright : © 2025-2026 SHICTHRS, Std. All rights reserved.\03
 
 __all__ = ['SHRVTChecker_get_vt_info']
 
-class SHRVTCheckerException(BaseException):
+class SHRVTCheckerException(Exception):
     def __init__(self , message: str) -> None:
         self.message = message
     
